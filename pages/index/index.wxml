@@ -1,0 +1,26 @@
+<!-- 首页top图 -->
+<image class="home_top_img" src="../../images/home_top_bg.jpeg" mode="aspectFill" />
+
+<scroll-view class="container" scroll-y>
+
+  <view class="aes_view">
+
+    <!-- 加密按钮 -->
+    <view class="aes_encryption_view bubble" bindtap="onEncryptionClick">加密</view>
+
+    <!-- 解密按钮 -->
+    <view class="aes_decryption_view bubble" bindtap="onDecryptionClick">解密</view>
+  </view>
+
+  <view class="world">
+  <view class="cube {{isActive ? 'active' : ''}}" bindtap="handleClick">
+    <view class="cube__front"></view>
+    <view class="cube__back"></view>
+    <view class="cube__left"></view>
+    <view class="cube__right"></view>
+    <view class="cube__top"></view>
+    <view class="cube__bottom"></view>
+  </view>
+</view>
+
+</scroll-view>

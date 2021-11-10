@@ -1,0 +1,34 @@
+<scroll-view class="scroll-view">
+  <view class="ips-contain-view">
+    <text class="ips_label">偏移量</text>
+    <input class="ips_input_view" value="{{ips_key}}" bindinput="onIpsInputListener"></input>
+  </view>
+
+  <view class="ips-contain-view">
+    <text class="ips_label">编码方式</text>
+    <view class="ips_input_view">{{encode_type}}</view>
+  </view>
+
+  <view class="ips-contain-view">
+    <text class="ips_label">填充类型（注：CBC）「算法/模式/补码方式」</text>
+    <view class="ips_input_view">{{cipher}}</view>
+  </view>
+
+  <view class="ips-contain-view">
+    <text class="ips_label">私钥</text>
+    <input class="ips_input_view" value="{{private_key}}" bindinput="onPrivateKeyInputListener"></input>
+  </view>
+
+  <view class="content-contain-view">
+    <text class="ips_label">{{content_title}}</text>
+    <textarea class="content_input_view" auto-height confirm-type="done" maxlength="100000" value="{{content_value}}" bindinput="onContentInputListener"></textarea>
+  </view>
+
+  <view class="operate_btn bubble" bindtap="onOperateClick">{{operate_btn_text}}</view>
+
+  <view class="content-contain-view" hidden="{{result_hidden}}">
+    <text class="ips_label">{{content_result_title}}</text>
+    <textarea class="content_input_view" auto-height confirm-type="done" maxlength="100000" value="{{result_value}}"></textarea>
+  </view>
+
+</scroll-view>

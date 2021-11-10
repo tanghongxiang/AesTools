@@ -1,0 +1,99 @@
+page{
+  background-color: teal;
+}
+.scroll-view{
+  display: flex;
+}
+
+.ips-contain-view {
+  display: flex;
+  height: 40px;
+  margin: 20px;
+  margin-bottom: 60rpx;
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+
+.ips_label {
+  position: absolute;
+  font-size: 12px;
+  background: teal;
+  margin: -10px 0 0 10px;
+  padding: 0 5px;
+  color: white;
+  display: flex;
+}
+
+.ips_input_view {
+  margin:  auto 10px;
+  width: 100%;
+  font-size: 30rpx;
+  color: black;
+}
+
+.content-contain-view{
+  display: flex;
+  height: auto;
+  margin: 20px;
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+
+.content_input_view{
+  width: 100%;
+  font-size: 30rpx;
+  color: black;
+  margin: 20rpx;
+}
+
+.operate_btn{
+  width: 80%;
+  height: 100rpx;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  font-weight: bold;
+  background-color: salmon;
+  display: flex;
+  border-radius: 16rpx;
+  font-size: 38rpx;
+  margin: 10%;
+  animation: animated-border 1.5s infinite;
+  font-family: Arial;
+  border: 2px solid;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+}
+
+.bubble {
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble:after {
+  content: "";
+  background: dimgray;
+  position: absolute;
+  width: 750rpx;
+  height: 750rpx;
+  left: calc(50% - 375rpx);
+  top: calc(50% - 375rpx);
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.bubble:active:after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+}
